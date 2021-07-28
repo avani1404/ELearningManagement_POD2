@@ -1,0 +1,34 @@
+
+<div class="container" id="container" style="padding-top: 100px;">
+  <div class="jumbotron">
+    <div class="well well-sm" id="pagename">
+      <h2 style="color: white;">List of all the Orders</h2>
+      </div><br><br>
+      <h4> 
+          Vendor ID: <br>
+          <input class="form-control" id="userId" type="text" [(ngModel)]="id">
+                <small>(Enter User Id to search details)</small><br>
+                <a class="btn btn-success" role="button" (click)="getInfo()">Get Information</a>
+      </h4><br><br>
+      <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Course Id</th>
+              <th>Learner Id</th>
+              <th>Purchase ID</th>
+              <!-- <th>Learner ID</th> -->
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor = "let user of purchase">
+         
+              <td>{{user.courseid}}</td>
+              <td>{{user.learnerid}}</td>
+              <td>{{user.purchaseid}}</td>
+                                                
+         </tr>   
+           
+          </tbody>
+        </table>
+  </div>
+</div>

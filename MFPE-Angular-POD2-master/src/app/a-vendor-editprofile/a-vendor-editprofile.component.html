@@ -1,0 +1,62 @@
+<div class="container" id="container" style="padding-top: 100px;">
+    <div class="jumbotron">
+        <div class="well well-sm" id="pagename">
+            <h2 style="color: white;">Edit Information</h2>
+            </div>
+        <br><br>
+        <div class="row">
+            <div class="col-md-6">
+                <label for="sel1">VENDOR ID:</label>
+                <!-- <label for="sel1">#</label> -->
+                <input class="form-control" id="userId" type="text" [(ngModel)]="id">
+                <small>(Enter Vendor Id to search details)</small><br>
+                <a class="btn btn-success" role="button" (click)="getInfo()" >Get Information</a>
+            </div>
+            <div class="col-md-6">
+                <label for="sel1">VENDOR NAME</label>
+                <label for="sel1" class="text-danger">{{user.name}}</label>
+            </div>
+        </div><br><br><br>
+        <div class="row">
+            <form [formGroup]="angForm" novalidate>
+                        <div class="col-md-6">
+                        <div class="form-group">
+                        <label for="inputdefault">Password</label>
+                        <input [(ngModel)]="user.password" class="form-control" id="name" type="text"  formControlName="password">
+                        <small *ngIf="angForm.controls['password'].invalid && angForm.controls['password'].touched" class="text-danger">Password is Required (Password should be at least 8 characters long and should contain one number,one character and one special character.)</small> 
+                        </div>
+                        <div class="form-group">
+                            <label for="inputdefault">DOB</label>
+                            <input [(ngModel)]="user.dob" class="form-control" id="dob" type="date"  formControlName="dob">
+                            <small *ngIf="angForm.controls['dob'].invalid && angForm.controls['dob'].touched" class="text-danger">DOB is Required</small> 
+                            </div>
+                        <div class="form-group">
+                                <label for="inputdefault">Contact Number</label>
+                                <input [(ngModel)]="user.contact" class="form-control" id="cNo" type="text"  formControlName="contact">
+                                <small *ngIf="angForm.controls['contact'].invalid && angForm.controls['contact'].touched" class="text-danger">Contact Number is Required (should not start with 0)</small> 
+                        </div>
+                        <div class="form-group">
+                            <label for="inputdefault">Address</label>
+                            <input [(ngModel)]="user.address" class="form-control" id="adrs" type="text"  formControlName="address" >
+                            <small *ngIf="angForm.controls['address'].invalid && angForm.controls['address'].touched" class="text-danger">Address is Required(Min. Length 10)</small>
+                        </div>
+                        <!-- <button type="button" class="btn btn-success" [routerLink]="['/v_sucessful_updation']">Submit</button> -->
+                        <button type="button" class="btn btn-success" (click)="onSubmit()">Submit</button>
+                        <!-- <a href="v_sucessful_updation" class="btn btn-success" role="button"  routerLink="/v_sucessful_updation">Submit</a> -->
+                        <!-- </form> -->
+                        <div style="text-align: center;" class="text-danger">
+                            <h3>{{resp}}</h3>
+                          </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="container">
+                            <br>
+                        <img src="assets/L_editprofile.svg" style="width:80%;">
+                    </div>
+                    </div>
+            </form>        
+        </div>
+
+           
+    </div>
+</div>

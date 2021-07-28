@@ -1,0 +1,26 @@
+<div class="container" id="container" style="padding-top: 100px;">
+    <div class="jumbotron">
+        <div class="well well-sm" id="pagename">
+            <h2 style="color: white;">Change Status of your Courses</h2>
+            </div><br><br>
+        <h4>Select your Course id:</h4>
+    <div class="form-group">
+        <select id="service" name="service"class="form-control" [(ngModel)]="service" id="sel1">
+          <option *ngFor="let dept of services" [value]="dept">
+              {{dept}}
+          </option>
+         
+        </select>
+    </div>
+
+        <form>
+            <div class="radio">
+               <br><br><br> <label><input  [(ngModel)]="status" value="Active" type="radio" name="status" checked>Do you want to activate your account.</label><br><br>
+            </div>
+            <div class="radio">
+                <label><input  [(ngModel)]="status" value="Deactive" type="radio" name="status" checked>Do you want to deactivate your account</label><br><br>
+            </div>
+            <button type="button" class="btn btn-success" (click)="onSubmit()">Submit</button>
+        </form>
+    </div>
+</div>

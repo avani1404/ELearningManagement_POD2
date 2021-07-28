@@ -1,0 +1,42 @@
+
+
+<div class="container" id="container" style="padding-top: 100px;">
+  <div class="jumbotron">
+
+    <div class="well well-sm" id="pagename">
+      <h2 style="color: white;">List of all New Courses </h2>
+      </div>
+      <!-- <h2>List of all Services </h2> -->
+      <br><br>
+      <!-- <h4> 
+          Learner ID:#
+      </h4><br><br> -->
+      <ul class="nav nav-pills nav-stacked anyClass">
+      <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Course Id</th>
+              <th>Course Name</th>
+              <th>Service Name</th>
+              <!-- <th>Purchase ID</th> -->
+              <th>Vendor Name</th>
+              <!-- <th>Purchase</th> -->
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <tr *ngFor = "let user of users"> 
+                <td>{{user.courseid}}</td>
+              <td>{{user.coursename}}</td>
+              <td>{{user.service}}</td>
+              <!-- <td>{{user.purchaseid}}</td> -->
+              <td>{{user.vendorname}}</td>
+              
+              <!-- <td><button type="button" class="btn btn-primary" (click)="toPurchase(user.courseid)">Click to Purchase</button></td> -->
+            </tr>        
+           
+          </tbody>
+        </table>
+      </ul>
+  </div>
+</div>

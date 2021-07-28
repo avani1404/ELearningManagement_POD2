@@ -1,0 +1,67 @@
+
+<div class="container" id="container" style="padding-top: 100px;">
+    <div class="jumbotron">
+
+    <div class="well well-sm" id="pagename">
+    <h2 style="color: white;">User List</h2>
+    </div><br>
+    <div class="container">
+               
+        
+        <br>
+          
+    </div>
+        <!-- <div class="input-group">
+            <span class="input-group-addon">Search</span>
+            <input id="msg" type="text" class="form-control" name="msg" placeholder="Additional Info">
+          </div> -->
+          <!-- <br> -->
+    
+    <div >
+        <ul class="nav nav-pills nav-stacked anyClass">
+
+        <table class="table table-striped">
+        <thead>
+        <tr>
+             
+            <th>User Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <!-- <th>Password</th> -->
+            <!-- <th>Birth date</th> -->
+            <th>Contact</th>
+            <th>Address</th>
+            <th>Role</th>
+            <th>Status</th>
+            <th>Update</th>
+            <th>Change Status</th>
+            
+          <!--   <th>BLOCK</th> -->
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor = "let user of users">
+           
+                    <td>{{user.userid}}</td>
+                    <td>{{user.name}}</td>
+                    <td>{{user.email}}</td>
+                    <!-- <td>{{user.password}}</td> -->
+                    <!-- <td>{{user.dob}}</td> -->
+                    <td>{{user.contact}}</td>
+                    <td>{{user.address}}</td>
+                    <td>{{user.role}}</td>
+                    <td>{{user.status}}</td>
+                    <td><button type="button" class="btn btn-primary" (click)="toUpdate(user.userid)">Update</button></td>
+                    <td><button type="button" class="btn btn-primary" (click)="toChangeStatus(user.userid)">Change Status</button></td>
+           
+            <!-- <td><form><input type="submit" value="block"></form></td> -->
+        </tr>
+        </tbody>
+        </table>
+
+            </ul>
+    
+    </div>
+    </div>
+</div>
+

@@ -1,0 +1,33 @@
+<body>
+  <div class="container" id="container" >
+     <div class="jumbotron" style="padding-top: 100px;">
+       <div class="well well-sm" id="pagename">
+         <h2 style="color: white;">List of all the Courses</h2>
+         </div><br><br>
+         <h4> 
+             Vendor ID:{{vendorid}}
+         </h4><br><br>
+         <table class="table table-striped">
+             <thead>
+               <tr>
+                 <th>Course Id</th>
+                 <th>Course Name</th>
+                 <th>Service Name</th>
+                 <th>Course Duration</th>
+                 <th>Status</th>
+               </tr>
+             </thead>
+             <tbody>
+               <tr *ngFor = "let user of users">
+                <td>{{user.courseid}}</td>
+                 <td>{{user.coursename}}</td>
+                 <td>{{user.service}}</td>
+                 <td>{{user.coursedurration}}</td>
+                 <td>{{user.status}}</td>
+               </tr>
+              
+             </tbody>
+           </table>
+     </div>
+ </div>
+</body>

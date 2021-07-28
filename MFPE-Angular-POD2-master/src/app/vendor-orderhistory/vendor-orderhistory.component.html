@@ -1,0 +1,35 @@
+<div class="container" id="container" style="padding-top: 100px;">
+    <div class="jumbotron">
+      <div class="well well-sm" id="pagename">
+        <h2 style="color: white;">List of all the Orders</h2>
+        </div><br><br>
+        <div class="col-md-6">
+          <label for="sel1">VENDOR Id:</label>
+          <label for="sel1" class="text-danger">{{id}}</label>
+      </div>
+        <br><br>
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Purchase ID</th>
+                <th>Course Id</th>
+                <th>Course Name</th>
+                <th>Service</th>
+                <th>Learner Name</th>                
+                <!-- <th>Learner ID</th> -->
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor = "let user of purchase">
+           
+                <td>{{user.purchaseid}}</td>
+                <td>{{user.courseid}}</td>
+                <td>{{user.coursename}}</td>                
+                <td>{{user.service}}</td>
+                <td>{{user.learnername}}</td>                                                  
+           </tr>   
+             
+            </tbody>
+          </table>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="container" id="container" style="padding-top: 100px;">
+    <div class="jumbotron">
+        <div class="well well-sm" id="pagename">
+            <h2 style="color: white;">Change Status of your Service</h2>
+            </div><br><br>
+        <h3>Category</h3>
+        <select class="form-control" id="sel1">
+          <option>Asynchronous Learning</option>
+          <option>Webinars</option>
+          <option>Online Tests</option>
+        </select>
+
+        <form>
+            <div class="radio">
+               <br><br><br> <label><input type="radio" name="status" checked>Do you want to activate your account.</label><br><br>
+            </div>
+            <div class="radio">
+                <label><input type="radio" name="status" checked>Do you want to deactivate your account</label><br><br>
+            </div>
+            <button type="button" class="btn btn-success" (click)="onSubmit()">Submit</button>
+        </form>
+    </div>
+</div>

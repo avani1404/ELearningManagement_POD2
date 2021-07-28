@@ -1,0 +1,69 @@
+<div class="container" id="container" style="padding-top: 100px;">
+    <div class="jumbotron">
+    <div class="well well-sm" id="pagename">
+    <h2 style="color: white;">Seach Course</h2>
+    </div><br>
+    <div class="container">
+               
+        <form>
+          <div class="form-group">
+            <h4><b> <label for="sel1">Search by service name:</label></b></h4>
+                <!-- <label for="sel1">Course</label> -->
+                  <select id="course" name="course"class="form-control" [(ngModel)]="service" id="sel2">
+                    <option *ngFor="let dept of services" [value]="dept.name">
+                        {{dept.name}}
+                    </option>                           
+                  </select>
+
+        </div>
+
+        <div class="form-group">
+          <input class="btn btn-success" ng-disabled="regForm.$invalid" type="submit" name="submit_reg" value="Search" (click)="onSubmit()">
+      </div>
+            
+        </form>
+        
+     
+
+
+        
+          
+    </div>               
+          
+    
+    <div><br>
+
+
+      <ul class="nav nav-pills nav-stacked anyClass">
+        <table class="table table-stripped">
+        <thead>
+        <tr>
+            <th>Course Id</th>
+            <th>Course Name</th>
+            <th>Vendor Name</th>
+            <th>Duration</th>
+            <!-- <th>Status</th> -->
+                        
+          <!--   <th>BLOCK</th> -->
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor = "let user of courseDetails">
+           
+                    <td>{{user.courseid}}</td>
+                    <td>{{user.coursename}}</td>
+                    <td>{{user.vendorname}}</td>
+                    <td>{{user.coursedurration}}</td>
+                    <!-- <td>{{user.status}}</td> -->
+                   
+           
+            <!-- <td><form><input type="submit" value="block"></form></td> -->
+        </tr>
+        </tbody>
+        </table>
+      </ul>
+
+    </div>
+    </div>
+</div>
+

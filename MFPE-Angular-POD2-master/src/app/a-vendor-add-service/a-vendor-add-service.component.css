@@ -1,0 +1,19 @@
+.jumbotron{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+    0 10px 10px rgba(0,0,0,0.22);
+}
+body{
+    background-color: #74b3b3;
+}
+.navbar-custom {
+    background-color: #008080;
+}
+a{
+    color: whitesmoke;
+}
+.btn-custom{
+    background-color: #008080;
+}
+#pagename{
+    background-color: #008080;
+}

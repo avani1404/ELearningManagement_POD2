@@ -1,0 +1,62 @@
+<body>
+    <div class="container">
+        <div class="container" style="padding-top:70px; padding-right: 100px;padding-left: 100px;">
+            <div class="jumbotron">
+                <h2>Registration Form</h2>
+                <br>
+                <form [formGroup]="exform" name="regForm">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                         <input  [(ngModel)]="user.name" formControlName="name" type="text" class="form-control" placeholder="Enter you Name" required>
+                         <small  *ngIf="exform.controls['name'].invalid && (exform.controls['name'].dirty || exform.controls['name'].touched)" class="text-danger">Name is Required</small> 
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                         <input  [(ngModel)]="user.email" formControlName="email" type="text" class="form-control" placeholder="Enter you Email" >
+                         <small  *ngIf="exform.controls['email'].invalid && (exform.controls['email'].dirty || exform.controls['email'].touched)" class="text-danger">Email is Required</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                         <input  [(ngModel)]="user.password" formControlName="password" type="text" class="form-control" placeholder="Create you Password" >
+                         <small  *ngIf="exform.controls['password'].invalid && (exform.controls['password'].dirty || exform.controls['password'].touched)" class="text-danger">Invalid password</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Date of Birth:</label>
+                         <input  [(ngModel)]="user.dob" formControlName="dob" type="date" [(ngModel)]="date" class="form-control" placeholder="Enter you Date of birth" >
+                         <small  *ngIf="exform.controls['dob'].invalid && (exform.controls['dob'].dirty || exform.controls['dob'].touched)" class="text-danger">Enter valid Date of Birth</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Contact Number:</label>
+                         <input  [(ngModel)]="user.contact" formControlName="phone" type="text" class="form-control" placeholder="Enter you Contact Number" >
+                         <small  *ngIf="exform.controls['phone'].invalid && (exform.controls['phone'].dirty || exform.controls['phone'].touched)" class="text-danger">Contact should be of Integer and minimum of 10 digits</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address:</label>
+                         <input  [(ngModel)]="user.address" formControlName="address" type="text" class="form-control" placeholder="Enter you Address" >
+                         <small  *ngIf="exform.controls['address'].invalid && (exform.controls['address'].dirty || exform.controls['address'].touched)" class="text-danger">Address is Mandatory</small>
+                    </div>
+                    <label>Role: Learner</label>
+                        
+    
+                        <div class="form-group form check" style="padding: 2%;">
+                        <label>
+                              <input  formControlName="atc" type="checkbox" class="form-check-input">
+                              <small  *ngIf="exform.controls['atc'].invalid && (exform.controls['atc'].dirty || exform.controls['atc'].touched)" class="text-danger"> Accepting Ts & Cs is required</small> I agree to all the terms and conditions
+                        </label>
+                        </div>
+    
+                        <!-- <button (onClick)="onSubmit()" [disabled]="exform.invalid" type="submit">Register</button> -->
+                        <!-- <button (onClick)="onSubmit()" type="submit">Register</button> -->
+                        <div class="form-group">
+                            <input class="btn btn-success" ng-disabled="regForm.$invalid" type="submit" name="submit_reg" value="Register" (click)="onSubmit()">
+                        </div>
+                        <div style="text-align: center; color:red;">
+                          <h3>{{age}}</h3>
+                        </div>
+                        <!-- <p>Form value: {{ exform.value | json }}</p> -->
+                        
+                </form>
+            </div>
+        </div>
+    </div>
+    </body>

@@ -1,0 +1,25 @@
+<body><br><br>
+	<div>
+	<div class="well well-sm" id="pagename">
+		<h2 style="color: white;">Welcome Admin </h2>
+		</div>
+	</div><br><br>
+<div class="container" id="container">
+	
+		<form [formGroup]="exform" novalidate>
+			<h1>Login</h1>
+			
+			
+			<input  [(ngModel)]="login.email" formControlName="email" type="email" placeholder="Email" />
+			<small *ngIf="exform.controls['email'].invalid && (exform.controls['email'].dirty || exform.controls['email'].touched)" class="text-danger">Email is Required</small>
+			
+			<input [(ngModel)]="login.password" formControlName="password" type="password" placeholder="Password" />
+			
+			<button id="signUp" (click)="onSubmit()"  >Login</button>
+
+			<div style="text-align: center; color:red;">
+				<h3 class="text-danger">{{message}}</h3>
+			  </div> 
+		</form>
+	</div>
+</body>

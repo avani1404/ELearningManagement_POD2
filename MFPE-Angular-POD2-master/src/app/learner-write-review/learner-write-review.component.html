@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<div class="container" id="container" style="padding-top: 100px;">
+    <div class="jumbotron">
+      <div class="well well-sm" id="pagename">
+        <h2 style="color: white;">Write Review</h2>
+        </div><br><br><br>
+        <div class="col-md-6">
+            <div class="well well-sm" style="background-color: lightgray;" id="detail">
+              <label for="sel1">COURSE ID: </label>
+              <label for="sel1"> {{courseid}}</label></div></div>
+              <div class="col-md-6">
+              <div class="well well-sm" style="background-color: lightgray;" id="detail">
+                <label for="sel1">SERVICE: </label>
+                <label for="sel1"> {{service}}</label></div></div>
+                <div class="col-md-6">
+                    <div class="well well-sm" style="background-color: lightgray;" id="detail">
+                      <label for="sel1">COURSE NAME: </label>
+                      <label for="sel1"> {{coursename}}</label></div></div>
+                      <div class="col-md-6">
+                      <div class="well well-sm" style="background-color: lightgray;" id="detail">
+                        <label for="sel1">VENDOR NAME: </label>
+                        <label for="sel1"> {{vendorname}}</label></div></div>
+    <div class="form-outline">
+    <textarea [(ngModel)]="review" class="form-control" id="textAreaExample1" rows="5" style="border-color: #008080; border-radius: 15px; border-width: 5px;"></textarea>
+   <h4> <label class="form-label" for="textAreaExample">Kindly give us your valuable review!!</label></h4>
+  </div><br>
+  <button (click)='onSubmit()' type="button" class="btn btn-primary" style="border-radius: 5px; background-color: #008080;">Submit Review!</button>
+ 
+  </div></div>

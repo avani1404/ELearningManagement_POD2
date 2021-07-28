@@ -1,0 +1,23 @@
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" rel="stylesheet"/>
+<div class="container" id="container" style="padding-top: 100px;">
+  <div class="jumbotron" id="page">
+    <div id="pagename" class="well well-sm">
+      <h2>Read Review</h2></div><br><br>
+  <div class="col-md-6">
+    <div class="well well-sm" style="background-color: lightgray;" id="detail">
+      <label for="sel1">COURSE ID: </label>
+      <label for="sel1"> {{courseid}}</label></div></div>
+      <div class="col-md-6">
+      <div class="well well-sm" style="background-color: lightgray;" id="detail">
+        <label for="sel1">COURSE Name: </label>
+        <label for="sel1"> {{coursename}}</label>
+        </div></div><br><br><br><br> 
+
+      <div *ngFor="let items of reviewSet">                  
+                <div class="panel panel-default" style="border-width: 5px;border-color: #519b9b ">
+                    <div class="panel-heading" style="background-color: lightgray;">{{items.learnername}}</div>
+                    <div class="panel-body">{{items.review}}</div>
+                </div>
+      </div>
+ 
+  </div></div>

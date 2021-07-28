@@ -1,0 +1,58 @@
+
+<body>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <div class="container" id="container" style="padding-top: 100px;">
+      <div class="jumbotron">
+          
+          <div class="well well-sm" id="pagename">
+              <h2 style="color: white;">Add Service</h2>
+              </div><br><br>
+          <div class="row">
+              <div class="col-md-6">
+
+                <div class="form-group">
+                  <label for="inputdefault">Vendor Id:</label>
+                  <input [(ngModel)]="addservice.vendorid" class="form-control" id="vendorid" type="text">
+                  <!-- <small *ngIf="angForm.controls['name'].invalid && angForm.controls['name'].touched" class="text-danger">Course Name is Required</small>  -->
+                </div>
+
+                  <form [formGroup]="exform" >
+                          <div class="form-group">
+                            <label for="sel1">Service</label>
+                            <select class="form-control" formControlName="service" [(ngModel)]="addservice.service">
+                               <!-- <small *ngIf="exform.controls['service'].invalid && (exform.controls['service'].dirty || exform.controls['service'].touched)" class="alert alert-danger">Status is required</small> -->
+                               <option>Asynchronous Learning</option>
+                               <option>Webinars</option>
+                               <option>Online Tests</option>
+                            </select>
+                          </div>
+                         <div class="form-group">
+                            <label for="inputdefault">Name of Course</label>
+                            <input class="form-control" formControlName="coursename" id="coursename" type="text" [(ngModel)]="addservice.coursename">
+                            <!-- <small *ngIf="exform.controls['coursename'].invalid && (exform.controls['coursename'].dirty || exform.controls['coursename'].touched)" class="alert alert-danger">Status is required</small> -->
+                         </div>
+                         <div class="form-group">
+                            <label for="inputdefault">Duration</label>
+                            <input class="form-control" id="coursedurration" formControlName="coursedurration" type="text" placeholder="in hours (ex: 6)" [(ngModel)]="addservice.coursedurration">
+                            <!-- <small *ngIf="exform.controls['coursedurration'].invalid && (exform.controls['coursedurration'].dirty || exform.controls['coursedurration'].touched)" class="alert alert-danger">Status is required</small> -->
+                         </div>
+                         <div class="form-group">
+                            <label for="comment">Description</label>
+                            <textarea class="form-control" id="coursedescription" formControlName="coursedescription" rows="5" placeholder="in hours (ex: 6)" [(ngModel)]="addservice.coursedescription"></textarea>
+                            <!-- <small *ngIf="exform.controls['coursedescription'].invalid && (exform.controls['coursedescription'].dirty || exform.controls['coursedescription'].touched)" class="alert alert-danger">Status is required</small> -->
+                          </div>
+                         <button type="button" class="btn btn-success" (click)="submit()">Submit</button>
+                  </form>
+          </div>
+          <div class="col-md-6">
+              <div class="container">
+                  <br><br>
+              <img src="assets/forms.svg" style="width:80%">
+          </div>
+          </div>
+          </div>
+ 
+             
+      </div>
+  </div>
+</body>

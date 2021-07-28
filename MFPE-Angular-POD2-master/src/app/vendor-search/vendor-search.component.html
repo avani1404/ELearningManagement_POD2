@@ -1,0 +1,71 @@
+<div class="container" id="container" style="padding-top: 100px;">
+    <div class="jumbotron">
+    <div class="well well-sm" id="pagename">
+    <h2 style="color: white;">Seach Course</h2>
+    </div><br>
+    <div class="container">
+               
+        <form>
+            <h4><label>Select Category:</label></h4>
+        <div class="l-10 form-check form-check-inline">            
+            <label class="form-check-label" for="radio1">
+              <input type="radio" [(ngModel)]="category" class="form-check-input" id="radio1" name="optradio" value="Webinars" checked> Webinars     
+            </label>            
+            <label class="form-check-label" for="radio2">
+              <input type="radio" [(ngModel)]="category" class="form-check-input" id="radio2" name="optradio" value="Online Tests"> Online Tests
+            </label>
+            <label class="form-check-label" for="radio2">
+                <input type="radio" [(ngModel)]="category" class="form-check-input" id="radio2" name="optradio" value="Asynchronous Learning"> Asynchronous Learning
+              </label>
+           
+          </div>
+          <br>
+
+          <div class="form-group">
+            <input class="btn btn-success" ng-disabled="regForm.$invalid" type="submit" name="submit_reg" value="Search" (click)="onSubmit()">
+        </div>
+        </form>
+        
+     
+
+
+        <br>
+          
+    </div>               
+          
+    
+    <div><br>
+      <ul class="nav nav-pills nav-stacked anyClass">
+        <table class="table table-stripped">
+        <thead>
+        <tr>
+          <th>Course Id</th>
+            <th>Course Name</th>
+           
+            <th>Duration</th>
+            <th>Status</th>
+                        
+          <!--   <th>BLOCK</th> -->
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor = "let user of courseDetails">
+           
+                    <td>{{user.courseid}}</td>
+                    <td>{{user.coursename}}</td>
+                    
+                    <td>{{user.coursedurration}}</td>
+                    <td>{{user.status}}</td>
+                   
+           
+            <!-- <td><form><input type="submit" value="block"></form></td> -->
+        </tr>
+        </tbody>
+        </table>
+
+      </ul>
+
+    </div>
+    </div>
+</div>
+

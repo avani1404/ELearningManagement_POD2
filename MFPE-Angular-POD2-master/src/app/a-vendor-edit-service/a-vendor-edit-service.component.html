@@ -1,0 +1,41 @@
+
+<div class="container" style="padding-top: 100px;">
+    <div class="jumbotron">
+        <div class="well well-sm" id="pagename">
+            <h2 style="color: white;">Edit Service</h2>
+            </div><br><br>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                   <h4><b> <label for="sel1">Select service name below:</label></b></h4>
+                    <!-- <label for="sel1">Service</label> -->
+                    <select id="service" name="service"class="form-control" [(ngModel)]="service" id="sel1">
+                        <option *ngFor="let dept of services" [value]="dept.name">
+                            {{dept.name}}
+                        </option>
+                       
+                      </select>
+                      <!-- <small>(Enter Vendor Id to search details)</small><br> -->
+                      <br>
+                <a class="btn btn-success" role="button" (click)="getInfo()" >Get All Courses</a>
+                    </div><br>
+                <div class="form-group">
+                    <h4><b> <label for="sel1">Select course id below:</label></b></h4>
+                        <!-- <label for="sel1">Course</label> -->
+                          <select id="course" name="course"class="form-control" [(ngModel)]="course" id="sel2">
+                            <option *ngFor="let dept of courses" [value]="dept">
+                                {{dept}}
+                            </option>                           
+                          </select>
+
+                </div>
+                <button type="button" class="btn btn-warning" (click)="onEdit()">Click Here to Edit</button>
+            </div>
+            <div class="col-md-6">
+                <div class="container">
+                <img src="assets\V_Add_Service.svg" style="width:100%;">
+            </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+.jumbotron{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+    0 10px 10px rgba(0,0,0,0.22);
+ 
+}
+body{
+    background-color: #f6f5f7;
+    /* background-image: url("C:/Users/924089/Downloads/pexels-elina-krima-3311533.jpg"); */
+    /* background-color: grey; */
+}
+.navbar-custom {
+    background-color: #008080;
+}
+a{
+    color: whitesmoke;
+}
+.btn-custom{
+    background-color: #008080;
+}
+#pagename{
+    background-color: #008080;
+}
+h2{
+    color: white;
+}
+ 
+#detail{
+    padding-left: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: lightgrey;
+}
+ 
+.Description{
+    background-color: grey;
+}

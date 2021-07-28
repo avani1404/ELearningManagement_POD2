@@ -1,0 +1,23 @@
+
+    <div class="container" id="container" style="padding-top: 100px;">
+        <div class="jumbotron">
+            <div class="well well-sm" id="pagename">
+                <h2 style="color: white;">Activate or Deactivate Account</h2>
+                </div><br><br>
+            <form>
+            <div class="radio">
+                <label style="font-size:20px;"><input [(ngModel)]="status" value="Active" type="radio" name="status" checked>Do you want to activate your account.</label><br><br>
+            </div>
+            <div class="radio">
+                <label  style="font-size:20px;"><input [(ngModel)]="status" value="Deactive" type="radio" name="status" checked>Do you want to deactivate your account</label><br><br>
+            </div>
+
+            <!-- <div style="text-align: center; color:red;">
+                <h3>{{resp}}</h3>
+              </div> -->
+
+            <a class="btn btn-success" role="button" (click)="onSubmit()">Submit</a>
+
+        </form>
+        </div>
+    </div>

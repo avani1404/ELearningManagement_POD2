@@ -1,0 +1,49 @@
+<div class="container" id="container" style="padding-top: 70px;">
+    <div class="jumbotron">
+        <div id="pagename" class="well well-sm">
+            <h2 >Edit Information</h2></div><br><br>
+        <div class="row">
+            <div class="col-md-6">
+                <label for="sel1">VENDOR ID:</label>
+                <label for="sel1">{{rescor.vendorid}}</label>
+            </div>
+            <div class="col-md-6">
+                <label for="sel1">SERVICE NAME:</label>
+                <label for="sel1">{{rescor.service}}</label>
+            </div>
+            <div class="col-md-6">
+                <label for="sel1">COURSE ID:</label>
+                <label for="sel1">{{rescor.courseid}}</label>
+            </div>
+            <div class="col-md-6">
+                <label for="sel1">COURSE NAME:</label>
+                <label for="sel1">{{rescor.coursename}}</label>
+            </div>
+        </div><br><br><br>
+        <div class="row">
+            <div class="col-md-6">
+                <form [formGroup]="exform" novalidate>
+                <div class="form-group">
+                    <label>Duration</label>
+                    <input class="form-control" formControlName="duration" type="text" placeholder="in hours (ex: 6)" [(ngModel)]="rescor.coursedurration">
+                    <small *ngIf="exform.controls['duration'].invalid && (exform.controls['duration'].dirty || exform.controls['duration'].touched)" class="alert alert-danger">Status is required</small>
+                 </div>
+                 <div class="form-group">
+                    <label>Description</label>
+                    <textarea class="form-control" formControlName="desc" rows="5" placeholder="Minimum 20 Characters" [(ngModel)]="rescor.coursedescription"></textarea>
+                    <small *ngIf="exform.controls['desc'].invalid && (exform.controls['desc'].dirty || exform.controls['desc'].touched)" class="alert alert-danger">Status is required</small>
+                  </div>
+              <button type="button" class="btn btn-success" (click)="onSubmit()">Submit</button>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <div class="container">
+                <br>
+            <img src="assets/L_editprofile.svg" style="width:80%;">
+        </div>
+        </div>
+        </div>
+ 
+           
+    </div>
+</div>
